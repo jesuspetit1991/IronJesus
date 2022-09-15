@@ -1,0 +1,39 @@
+# LAB 4 
+use sakila;
+
+#Get film ratings.
+select * from film;
+select title, rating from film;
+
+#Get release years.
+select * from film;
+select title, release_year from film;
+
+#Get all films with ARMAGEDDON in the title.
+select * from film;
+select title from film where title like "%ARMAGEDDON%";
+
+#Get all films with APOLLO in the title
+select * from film;
+select title from film where title like "%APOLLO%";
+
+#Get all films which title ends with APOLLO.
+
+#Get all films with word DATE in the title.
+select * from film;
+select title from film where title like "%DATE%";
+
+#Get 10 films with the longest title.
+
+#Get 10 the longest films.
+select * from film;
+select title as longest_movies from film order by length desc limit 10;
+
+#How many films include Behind the Scenes content?
+select * from film;
+select distinct title from film where special_features = "Behind the Scenes";
+select distinct count(title) from film where special_features = "Behind the Scenes";
+
+#List films ordered by release year and title in alphabetical order.
+select * from film;
+select title, release_year from film order by title;
